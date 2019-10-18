@@ -284,7 +284,15 @@
       <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="m" value="$method$($arguments$) {&#10;  $END$&#10;}," description="Objects and classes: method (ES6 syntax)" toReformat="false" toShortenFQNames="true">
+  <template name="m" value="$method$($arguments$) {&#10;  $END$&#10;}" description="Classes: method (ES6 syntax)" toReformat="false" toShortenFQNames="true">
+    <variable name="method" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="arguments" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="m," value="$method$($arguments$) {&#10;  $END$&#10;}," description="Objects: method (ES6 syntax)" toReformat="false" toShortenFQNames="true">
     <variable name="method" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="arguments" expression="" defaultValue="" alwaysStopAt="true" />
     <context>

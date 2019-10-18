@@ -287,7 +287,7 @@ function* $name$ ($arguments$) {
             <td> Iterables:  forEach loop (chainable) </td>
             <td>
                 <pre>
-$iterable$.forEach(($item$)) =&gt; {
+$iterable$.forEach(($item$) =&gt; {
   $END$
 });                </pre>
             </td>
@@ -297,7 +297,7 @@ $iterable$.forEach(($item$)) =&gt; {
             <td> Iterables: map function (chainable) </td>
             <td>
                 <pre>
-$iterable$.map(($item$)) =&gt; {
+$iterable$.map(($item$) =&gt; {
   return $END$
 });                </pre>
             </td>
@@ -379,12 +379,22 @@ $key$: $value$                </pre>
         </tr>
             <tr>
             <td> m </td>
-            <td> Objects and classes: method (ES6 syntax) </td>
+            <td> Classes: method (ES6 syntax) </td>
             <td>
                 <pre>
 $method$($arguments$) {
   $END$
 }                </pre>
+            </td>
+        </tr>
+            <tr>
+            <td> m, </td>
+            <td> Objects: method (ES6 syntax) </td>
+            <td>
+                <pre>
+$method$($arguments$) {
+  $END$
+},                </pre>
             </td>
         </tr>
             <tr>
@@ -692,16 +702,6 @@ console.warn($END$);                </pre>
             </td>
         </tr>
             <tr>
-            <td> st </td>
-            <td> Timers: setTimeout </td>
-            <td>
-                <pre>
-setTimeout(() =&gt; {
-  $END$
-}, $delay$);                </pre>
-            </td>
-        </tr>
-            <tr>
             <td> si </td>
             <td> Timers: setInterval </td>
             <td>
@@ -712,8 +712,18 @@ setInterval(() =&gt; {
             </td>
         </tr>
             <tr>
+            <td> st </td>
+            <td> Timers: setTimeout </td>
+            <td>
+                <pre>
+setTimeout(() =&gt; {
+  $END$
+}, $delay$);                </pre>
+            </td>
+        </tr>
+            <tr>
             <td> sim </td>
-            <td> Timers: setInterval </td>
+            <td> Timers: setImmediate </td>
             <td>
                 <pre>
 setImmediate(() =&gt; {
@@ -831,6 +841,7 @@ function $name$($arguments$) {
 }                </pre>
             </td>
         </tr>
+    
     </tbody>
 </table>
 
@@ -854,4 +865,12 @@ Put `es6.xml` inside of the following directory:
 
 ```bash
 ~/Library/Preferences/<intellij-product-install>/templates
+```
+
+You might need to create the `templates` directory.
+
+If you are using Sync the path is:
+
+```bash
+~/Library/Preferences/<intellij-product-install>/jba_config/templates
 ```
